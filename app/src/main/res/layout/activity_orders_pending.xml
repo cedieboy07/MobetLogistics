@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Orders_Pending">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orders"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="91dp"
+        android:layout_height="34dp"
+        app:srcCompat="@drawable/history_tab"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="91dp"
+        android:layout_height="34dp"
+        app:srcCompat="@drawable/pending_tab"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/orders_menu_container"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/taskbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/chat_bubble"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/inventory"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/profile_image"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/oders"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/delivery"
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="332dp"
+        android:layout_height="197dp"
+        app:srcCompat="@drawable/orders_container"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Details"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="114dp"
+        android:layout_height="41dp"
+        android:text="Packaged"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="114dp"
+        android:layout_height="41dp"
+        android:text="Cancel"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

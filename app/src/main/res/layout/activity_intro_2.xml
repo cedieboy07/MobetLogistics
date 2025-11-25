@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro_2">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-149dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="151dp"
+        android:layout_height="26dp"
+        android:text="Mobet Logistics"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="20dp"
+        android:layout_height="19dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/arrow"
+        tools:layout_editor_absoluteX="371dp"
+        tools:layout_editor_absoluteY="672dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:text="Next"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="671dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
