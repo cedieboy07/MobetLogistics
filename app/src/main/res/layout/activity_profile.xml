@@ -16,24 +16,85 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="38dp" />
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="29dp" />
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="428dp"
-        android:layout_height="737dp"
+        android:layout_width="700dp"
+        android:layout_height="903dp"
         app:srcCompat="@drawable/profile_box"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="127dp" />
+        tools:layout_editor_absoluteX="-138dp"
+        tools:layout_editor_absoluteY="107dp" />
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/profile_icon"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="127dp" />
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seller Contact Number"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle Name:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sex:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="614dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
