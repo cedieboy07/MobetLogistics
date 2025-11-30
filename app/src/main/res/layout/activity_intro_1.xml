@@ -12,56 +12,59 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/introbg_shape1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-162dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/introbg_shape1" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="327dp"
         android:layout_height="319dp"
-        app:srcCompat="@drawable/Intro_image_1"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="99dp" />
+        android:layout_marginTop="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/Intro_image_1" />
 
     <TextView
         android:id="@+id/MobetLog"
-        android:layout_width="151dp"
-        android:layout_height="26dp"
-        android:text="Mobet Logistics"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="377dp" />
+        android:text="Mobet Logistics"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="211dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="418dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MobetLog" />
 
     <TextView
         android:id="@+id/Nextarrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEmd="true"
-        android:layout_margin="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:drawableEnd="@drawable/keyboard_double_arrow_right"
         android:drawablePadding="10dp"
         android:padding="5dp"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="681dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
