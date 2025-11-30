@@ -5,17 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#04364e"
+    android:background="@color/darkblue"
     tools:context=".Intro_1">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/vector0"
+        app:srcCompat="@drawable/introbg_shape1"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-162dp" />
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="327dp"
+        android:layout_height="319dp"
+        app:srcCompat="@drawable/Intro_image_1"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="99dp" />
 
     <TextView
         android:id="@+id/MobetLog"
@@ -23,11 +30,21 @@
         android:layout_height="26dp"
         android:text="Mobet Logistics"
         android:textSize="20dp"
-        android:textColor="@color/cyan"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:gravity="center_horizontal"
         tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="377dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="418dp" />
 
     <TextView
         android:id="@+id/Nextarrow"
@@ -40,28 +57,11 @@
         android:drawablePadding="10dp"
         android:padding="5dp"
         android:text="Next"
-        android:textColor="@color/cyan"
+        android:textColor="@color/white"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="318dp"
         tools:layout_editor_absoluteY="681dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="211dp"
-        android:layout_height="40dp"
-        android:gravity="center_horizontal"
-        android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-        android:textColor="@color/cyan"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="418dp" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="327dp"
-        android:layout_height="319dp"
-        app:srcCompat="@drawable/Intro_image_1"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="99dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
