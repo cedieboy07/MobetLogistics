@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Intro_image_3" />
+        app:srcCompat="@drawable/intro_image_3" />
 
     <TextView
         android:id="@+id/MobetLog"
