@@ -9,11 +9,14 @@
     tools:context=".Profile">
 
     <!-- HEADER -->
+
+    <!-- PROFILE IMAGE SECTION -->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Profile"
         android:textColor="@color/white"
         android:textSize="40sp"
@@ -22,13 +25,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- PROFILE IMAGE SECTION -->
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="502dp"
         android:layout_height="734dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/profile_box" />
@@ -37,7 +40,7 @@
         android:id="@+id/imageView17"
         android:layout_width="87dp"
         android:layout_height="88dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
@@ -47,12 +50,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="Nickname"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView17" />
 
@@ -75,7 +79,7 @@
         android:id="@+id/labelFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="First Name:"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -142,19 +146,6 @@
     <!-- DEMOGRAPHICS SECTION (Sex, Birthdate, Age) -->
 
     <TextView
-        android:id="@+id/labelSex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Sex:"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/labelBirthdate"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valMiddleName" />
-
-    <TextView
         android:id="@+id/valSex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -177,15 +168,17 @@
         app:layout_constraintTop_toTopOf="@+id/labelSex" />
 
     <TextView
-        android:id="@+id/valBirthdate"
+        android:id="@+id/labelSex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
+        android:layout_marginTop="12dp"
+        android:text="Sex:"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/labelBirthdate"
-        app:layout_constraintStart_toStartOf="@+id/labelBirthdate"
-        app:layout_constraintTop_toBottomOf="@+id/labelBirthdate" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/labelBirthdate"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valMiddleName" />
 
     <TextView
         android:id="@+id/labelAge"
@@ -197,6 +190,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/labelBirthdate"
         app:layout_constraintTop_toTopOf="@+id/labelSex" />
+
+    <TextView
+        android:id="@+id/valBirthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/labelBirthdate"
+        app:layout_constraintStart_toStartOf="@+id/labelBirthdate"
+        app:layout_constraintTop_toBottomOf="@+id/labelBirthdate" />
 
     <TextView
         android:id="@+id/valAge"
@@ -215,7 +219,7 @@
         android:id="@+id/labelAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:text="Address:"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -264,7 +268,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valAddress"
@@ -287,7 +291,7 @@
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView21"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -334,6 +338,7 @@
         android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         app:layout_constraintVertical_bias="0.0" />
