@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvRestockName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textStyle="bold"
+            android:textColor="#0D3E51"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvCurrentStockLabel"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvCurrentStockLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Stock:"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvRestockQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#D32F2F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentStockLabel"/>
+
+        <View
+            android:id="@+id/dividerRestock"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvRestockQty"/>
+
+        <TextView
+            android:id="@+id/tvAddLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual Add:"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerRestock"/>
+
+        <EditText
+            android:id="@+id/etAddQty"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/tvAddLabel"
+            app:layout_constraintTop_toTopOf="@id/tvAddLabel"
+            app:layout_constraintBottom_toBottomOf="@id/tvAddLabel"/>
+
+        <Button
+            android:id="@+id/btnConfirmRestock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textSize="12sp"
+            android:backgroundTint="#00A8B5"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnOrderStock"
+            app:layout_constraintTop_toBottomOf="@id/etAddQty"
+            app:layout_constraintHorizontal_weight="1"/>
+
+        <Button
+            android:id="@+id/btnOrderStock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Order Stock"
+            android:textSize="12sp"
+            android:backgroundTint="#0D3E51"
+            android:textColor="#FFFFFF"
+            app:icon="@android:drawable/ic_menu_my_calendar"
+            app:iconSize="14dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/btnConfirmRestock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnConfirmRestock"
+            app:layout_constraintBottom_toBottomOf="@+id/btnConfirmRestock"
+            app:layout_constraintHorizontal_weight="1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
