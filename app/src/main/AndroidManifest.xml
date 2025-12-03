@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobetLog">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Inventory_Dashboard"
             android:exported="false" />
         <activity
