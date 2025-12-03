@@ -64,6 +64,9 @@
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

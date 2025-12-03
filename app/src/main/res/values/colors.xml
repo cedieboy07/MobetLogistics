@@ -7,8 +7,3 @@
     <color name="darkblue">#04364E</color>
     <color name="cyan">#10A7B4</color>
 </resources>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:color="#00A8B5" android:state_selected="true" />
-
-<item android:color="#B0BEC5"/>
-</selector>

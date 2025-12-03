@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
+
 class OrdersActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
@@ -30,8 +31,8 @@ class OrdersActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // 3. Setup Tabs (To switch between Pending and History)
-        tabPending = findViewById(R.id.tabContainer) // Assuming this is the LinearLayout or first TextView
-            .findViewWithTag("pending") // *Note: See update below if tags aren't set
+            tabPending = findViewById(R.id.btnTabPending)
+            tabHistory = findViewById(R.id.btnTabHistory)
 
         // Let's do a safer find approach based on your XML structure:
         val tabContainer = findViewById<android.view.ViewGroup>(R.id.tabContainer)
@@ -70,7 +71,7 @@ class OrdersActivity : AppCompatActivity() {
     }
 
     private fun updateTabColors(isPendingSelected: Boolean) {
-        val activeColor = ContextCompat.getColor(this, R.color.teal_700) // Replace with your Cyan color
+        val activeColor = ContextCompat.getColor(this, R.color.cyan) // Replace with your Cyan color
         val inactiveColor = ContextCompat.getColor(this, android.R.color.darker_gray)
         val white = ContextCompat.getColor(this, android.R.color.white)
 

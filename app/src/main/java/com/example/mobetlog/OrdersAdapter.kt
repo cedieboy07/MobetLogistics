@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
 class OrdersAdapter(private val orderList: List<OrderModel>) :
     RecyclerView.Adapter<OrdersAdapter.OrderViewHolder>() {
 
@@ -18,16 +19,24 @@ class OrdersAdapter(private val orderList: List<OrderModel>) :
     override fun onBindViewHolder(holder: OrderViewHolder, position: Int) {
         val currentOrder = orderList[position]
 
-        // Format the text to show ID, Price, and Address
-        val displayText = "Order #${currentOrder.orderId}\n" +
-                "Price: $${currentOrder.totalPrice}\n" +
-                "Dest: ${currentOrder.shippingAddress}"
+        // 1. Bind Data to the IDs found in your XML
+        holder.tvOrderId.text = "Order #${currentOrder.orderId}"
+        holder.tvShippingAddress.text = currentOrder.shippingAddress
+        holder.tvTotalPrice.text = "$ ${currentOrder.totalPrice}"
 
-        holder.tvDetails.text = displayText
+        // Optional: If your OrderModel has a list of items, you can set it here
+        // holder.tvOrderItems.text = currentOrder.items
 
-        // PACKAGED BUTTON LOGIC
+        // Optional: If your OrderModel has a buyer name
+        // holder.tvBuyerName.text = currentOrder.buyerName
+
+        // 2. Button Logic
         holder.btnPackaged.setOnClickListener {
-            // Later we will add code here to update the 'status' column in SQL
+            // Add update logic here
+        }
+
+        holder.btnCancel.setOnClickListener {
+            // Add cancel logic here
         }
     }
 
@@ -35,9 +44,16 @@ class OrdersAdapter(private val orderList: List<OrderModel>) :
         return orderList.size
     }
 
+    // 3. Update the ViewHolder to find the IDs that ACTUALLY exist in your XML
     class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvDetails: TextView = itemView.findViewById(R.id.tvOrderDetails)
+        val tvOrderId: TextView = itemView.findViewById(R.id.tvOrderId)
+        val tvShippingAddress: TextView = itemView.findViewById(R.id.tvShippingAddress)
+        val tvTotalPrice: TextView = itemView.findViewById(R.id.tvTotalPrice)
         val btnPackaged: Button = itemView.findViewById(R.id.btnPackaged)
         val btnCancel: Button = itemView.findViewById(R.id.btnCancel)
+
+        // You can also add these if you want to use them:
+        // val tvBuyerName: TextView = itemView.findViewById(R.id.tvBuyerName)
+        // val tvOrderItems: TextView = itemView.findViewById(R.id.tvOrderItems)
     }
 }
