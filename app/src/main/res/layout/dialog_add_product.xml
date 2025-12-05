@@ -43,6 +43,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/categoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginBottom="8dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:padding="12dp"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <EditText
         android:id="@+id/etPrice"
         android:hint="Price"

@@ -16,5 +16,7 @@ class Orders_Pending : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        BottomNavHelper.setup(this, BottomNavHelper.NavItem.ORDERS)
     }
 }

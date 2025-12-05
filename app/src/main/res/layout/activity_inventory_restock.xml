@@ -37,7 +37,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="5dp"
         app:singleSelection="true"
-        app:checkedButtonId="@id/btnFilterAll"
+        app:checkedButton="@id/btnFilterAll"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 

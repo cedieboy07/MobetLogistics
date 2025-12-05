@@ -11,39 +11,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobetLog">
-        <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Inventory_Dashboard"
-            android:exported="false" />
-        <activity
-            android:name=".Orders_History"
-            android:exported="false" />
-        <activity
-            android:name=".Orders_Pending"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".Intro_3"
-            android:exported="false" />
+
+        <!-- 1. (STARTS HERE) -->
         <activity
             android:name=".Intro_1"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity android:name=".Intro_2" android:exported="false" />
+        <activity android:name=".Intro_3" android:exported="false" />
+        <activity android:name=".Login" android:exported="false" />
+        <activity android:name=".SignUp" android:exported="false" />
+
+        <!-- DASHBOARD -->
+        <activity android:name=".MainActivity" android:exported="false" />
+
+        <!-- ORDERS -->
+        <activity android:name=".OrdersActivity" android:exported="false" />
+
+        <!-- OTHER ACTIVITIES -->
+        <activity android:name=".Profile" android:exported="false" />
+        <activity android:name=".Inventory_Dashboard" android:exported="false" />
+        <activity android:name=".Orders_History" android:exported="false" />
+        <activity android:name=".Orders_Pending" android:exported="false" />
+        <activity android:name=".Inventory_Restock" android:exported="false" />
+        <activity android:name=".Inventory_Products" android:exported="false" />
+        <activity android:name=".Inventory_Categories" android:exported="false" />
+        <activity android:name=".Inventory_History" android:exported="false" />
+        <activity android:name=".DeliveriesActivity" android:exported="false"/>
+        <activity android:name=".ChatsActivity" android:exported="false" />
+
+    </application>
 </manifest>

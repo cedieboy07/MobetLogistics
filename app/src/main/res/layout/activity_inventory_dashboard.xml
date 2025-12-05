@@ -79,7 +79,6 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true"
-            android:selected="true"
             android:background="?attr/selectableItemBackgroundBorderless">
 
             <ImageView

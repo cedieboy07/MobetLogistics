@@ -36,6 +36,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/profile_box" />
 
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/purple"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="87dp"
@@ -53,7 +67,7 @@
         android:layout_marginTop="4dp"
         android:text="Nickname"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -67,7 +81,7 @@
         android:layout_marginTop="4dp"
         android:text="Seller Contact Number"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -82,7 +96,7 @@
         android:layout_marginTop="8dp"
         android:text="First Name:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/labelMiddleName"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelFirstName"
         app:layout_constraintStart_toStartOf="@+id/labelFirstName"
         app:layout_constraintTop_toBottomOf="@+id/labelFirstName" />
@@ -105,7 +119,7 @@
         android:layout_height="wrap_content"
         android:text="Middle Name:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/labelLastName"
         app:layout_constraintStart_toEndOf="@+id/labelFirstName"
         app:layout_constraintTop_toTopOf="@+id/labelFirstName" />
@@ -116,8 +130,9 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelMiddleName"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/labelMiddleName"
         app:layout_constraintTop_toBottomOf="@+id/labelMiddleName" />
 
@@ -127,7 +142,7 @@
         android:layout_height="wrap_content"
         android:text="Last Name:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/labelMiddleName"
         app:layout_constraintTop_toTopOf="@+id/labelFirstName" />
@@ -138,7 +153,7 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelLastName"
         app:layout_constraintStart_toStartOf="@+id/labelLastName"
         app:layout_constraintTop_toBottomOf="@+id/labelLastName" />
@@ -151,7 +166,7 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelSex"
         app:layout_constraintStart_toStartOf="@+id/labelSex"
         app:layout_constraintTop_toBottomOf="@+id/labelSex" />
@@ -162,7 +177,7 @@
         android:layout_height="wrap_content"
         android:text="Birthdate:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/labelAge"
         app:layout_constraintStart_toEndOf="@+id/labelSex"
         app:layout_constraintTop_toTopOf="@+id/labelSex" />
@@ -174,7 +189,7 @@
         android:layout_marginTop="12dp"
         android:text="Sex:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/labelBirthdate"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,7 +201,7 @@
         android:layout_height="wrap_content"
         android:text="Age:"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/labelBirthdate"
         app:layout_constraintTop_toTopOf="@+id/labelSex" />
@@ -197,7 +212,7 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelBirthdate"
         app:layout_constraintStart_toStartOf="@+id/labelBirthdate"
         app:layout_constraintTop_toBottomOf="@+id/labelBirthdate" />
@@ -208,58 +223,63 @@
         android:layout_height="wrap_content"
         android:text="..."
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/labelAge"
         app:layout_constraintStart_toStartOf="@+id/labelAge"
         app:layout_constraintTop_toBottomOf="@+id/labelAge" />
 
-    <!-- CONTACT SECTION (Address, Email) -->
+    <!-- CONTACT SECTION (Address, Email) - VERTICAL -->
 
-    <TextView
-        android:id="@+id/labelAddress"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/contactBlock"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Address:"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/labelEmail"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/valBirthdate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valBirthdate" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/valAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="..."
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/labelAddress"
-        app:layout_constraintStart_toStartOf="@+id/labelAddress"
-        app:layout_constraintTop_toBottomOf="@+id/labelAddress" />
+        <TextView
+            android:id="@+id/labelAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/labelEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email:"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelAddress"
-        app:layout_constraintTop_toTopOf="@+id/labelAddress" />
+        <TextView
+            android:id="@+id/valAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center" />
 
-    <TextView
-        android:id="@+id/valEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="..."
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/labelEmail"
-        app:layout_constraintStart_toStartOf="@+id/labelEmail"
-        app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Email:"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/valEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center" />
+    </LinearLayout>
 
     <!-- LINKED ACCOUNTS SECTION -->
 
@@ -268,10 +288,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valAddress"
+        app:layout_constraintTop_toBottomOf="@+id/contactBlock"
         app:srcCompat="@drawable/accounts_box" />
 
     <TextView
@@ -334,14 +354,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="50dp"
         android:text="Log Out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -363,7 +383,6 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true"
-            android:selected="true"
             android:background="?attr/selectableItemBackgroundBorderless">
 
             <ImageView

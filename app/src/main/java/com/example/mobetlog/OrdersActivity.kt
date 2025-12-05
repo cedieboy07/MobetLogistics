@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
 class OrdersActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
@@ -22,6 +21,9 @@ class OrdersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_orders)
 
+        // 🔹 Wire up bottom nav for Orders screen
+        BottomNavHelper.setup(this, BottomNavHelper.NavItem.ORDERS)
+
         // 1. Initialize Database Helper
         dbHelper = DatabaseHelper(this)
 
@@ -30,10 +32,6 @@ class OrdersActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // 3. Setup Tabs (To switch between Pending and History)
-        tabPending = findViewById(R.id.tabContainer) // Assuming this is the LinearLayout or first TextView
-            .findViewWithTag("pending") // *Note: See update below if tags aren't set
-
-        // Let's do a safer find approach based on your XML structure:
         val tabContainer = findViewById<android.view.ViewGroup>(R.id.tabContainer)
         tabPending = tabContainer.getChildAt(0) as TextView
         tabHistory = tabContainer.getChildAt(1) as TextView
@@ -50,39 +48,46 @@ class OrdersActivity : AppCompatActivity() {
 
         tabHistory.setOnClickListener {
             // Assuming "Completed" or "History" is the status in your DB
-            loadOrders("Completed")
+            loadOrders("History")
             updateTabColors(isPendingSelected = false)
         }
     }
 
     private fun loadOrders(status: String) {
-        // Fetch data from the database based on status
-        val orderList = dbHelper.getOrdersByStatus(status)
+        if (status == "Pending") {
 
-        // Check if list is empty (Optional: Show a "No orders" text)
-        if (orderList.isEmpty()) {
-            // You could show a toast or text here
+            val orders = dbHelper.getOrdersByStatus("Pending")
+            val adapter = OrdersAdapter(orders.toMutableList(), dbHelper) {
+                loadOrders("Pending")   // callback reload
+            }
+
+            recyclerView.adapter = adapter // FIXED
+
+        } else {
+
+            val prefs = getSharedPreferences("mobet_prefs", MODE_PRIVATE)
+            val currentUserId = prefs.getInt("USER_ID", -1)
+
+            val historyOrders = dbHelper.getOrdersForUserHistory(currentUserId)
+            val historyAdapter = OrdersHistoryAdapter(historyOrders, dbHelper)
+
+            recyclerView.adapter = historyAdapter // FIXED
         }
-
-        // Create adapter and attach to RecyclerView
-        adapter = OrdersAdapter(orderList)
-        recyclerView.adapter = adapter
     }
 
+
     private fun updateTabColors(isPendingSelected: Boolean) {
-        val activeColor = ContextCompat.getColor(this, R.color.teal_700) // Replace with your Cyan color
+        val activeColor = ContextCompat.getColor(this, R.color.cyan)
         val inactiveColor = ContextCompat.getColor(this, android.R.color.darker_gray)
         val white = ContextCompat.getColor(this, android.R.color.white)
 
         if (isPendingSelected) {
-            // Pending is Active
-            tabPending.setBackgroundColor(activeColor) // Use your Cyan Hex code if needed
+            tabPending.setBackgroundColor(activeColor)
             tabPending.setTextColor(white)
 
             tabHistory.setBackgroundColor(inactiveColor)
-            tabHistory.setTextColor(activeColor) // Or black
+            tabHistory.setTextColor(activeColor)
         } else {
-            // History is Active
             tabHistory.setBackgroundColor(activeColor)
             tabHistory.setTextColor(white)
 

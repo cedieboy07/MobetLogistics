@@ -3,18 +3,35 @@ package com.example.mobetlog
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class Orders_History : AppCompatActivity() {
+
+    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var recyclerView: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_orders_history)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        BottomNavHelper.setup(this, BottomNavHelper.NavItem.ORDERS)
+
+        dbHelper = DatabaseHelper(this)
+        recyclerView = findViewById(R.id.recyclerViewOrdersHistory)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        loadHistoryOrders()
+    }
+
+    private fun loadHistoryOrders() {
+        val prefs = getSharedPreferences("mobet_prefs", MODE_PRIVATE)
+        val userId = prefs.getInt("USER_ID", -1)
+
+        // Load only COMPLETED or ON DELIVERY orders
+        val historyOrders = dbHelper.getOrdersForUserHistory(userId)
+
+        recyclerView.adapter = OrdersHistoryAdapter(historyOrders, dbHelper)
     }
 }
